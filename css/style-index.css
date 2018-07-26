@@ -150,9 +150,6 @@ a:hover{
 }
 
 @media (max-width: 1199px){
-    .dropdown:hover > .dropdown-menu {
-        display: none;
-    }
     .card h3{
         font-size: 1.5em;
     }
@@ -163,6 +160,12 @@ a:hover{
 @media (max-width: 991px){
     .dropdown-menu{
         width: 100%;
+    }
+    .dropdown > .dropdown-toggle:active {
+        pointer-events: fill;
+    }
+    .dropdown > .dropdown-toggle:disabled {
+        pointer-events: none;
     }
     #navbarResponsive li{
         text-align: center;
