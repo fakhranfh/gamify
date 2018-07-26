@@ -151,7 +151,7 @@ a:hover{
 
 @media (max-width: 1199px){
     .dropdown > .dropdown-toggle:active {
-        pointer-events: none;
+        pointer-events: fill;
     }
     .card h3{
         font-size: 1.5em;
