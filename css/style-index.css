@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #271c1c;
+}
+.modal-header, .modal-footer{
+    border: none;
+}
+.close{
+    color: white;
+}
+#banner{
+    background-image: url(../img/far_cry_5.jpg);
+    background-size: cover;
+    margin-bottom: 2em;
+}
+#banner-caption h1, #banner-caption h3, #banner-caption h4{
+    padding: .4em;
+}
+#banner-caption h4{
+    font-weight: 100;
+}
+#banner-caption h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+#banner-caption{
+    padding-top: 4.9em;
+}
+.navbar{
+    padding: .8rem;
+}
+.navbar-nav li{
+    padding-right: 50px;
+}
+.bg-navbar{
+    transition:750ms ease;
+    background:transparent;
+}
+.bg-navbar.scrolled{
+    background-color: rgba(0,0,0, 0.75);
+}
+.nav-link{
+    cursor: pointer;
+}
+.dropdown-menu{
+    background-color: #271c1c;
+    width: fit-content;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+.dropdown-item{
+    color: white;
+    text-align: center;
+}
+.form-group button{
+    margin-left: -20px;
+}
+.card{
+    background-color: #33373b;
+}
+.card-game-category{
+    margin-bottom: 2em;
+}
+.card img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 10px #000;
+}
+.card-body h3, .card-body h2, .card-body h6{
+    text-align: center;
+}
+.card-body > h3{
+    margin-top: 1.8rem;
+}
+.card-body h2{
+    font-weight: bold;
+    padding-bottom: .7em;
+}
+.card-body p{
+    text-align: justify;
+}
+.card-body h6{
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.card-body .row{
+    padding: .7em;
+}
+.rank-2-5-v .row:hover, .game-no1:hover{
+    background-color: #535353;
+}
+.rank-2-5-h{
+    display: none;
+}
+#toTop{
+    position: fixed;
+    width: 2em;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    font-size: 2em;
+}
+.footer{
+    background-color: #100f0f;
+}
+.social a {
+    font-size: 3.5em;
+    padding: 3rem;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-github,
+.fa-instagram,
+.fa-youtube{
+    color: white;
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-github:hover,
+.fa-instagram:hover,
+.fa-youtube:hover{
+    color: #535353;
+}
+.padding-social{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+a, a:hover{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+
+@media (max-width: 1199px){
+    .dropdown-menu{
+        width: 100%;
+    }
+    .card h3{
+        font-size: 1.5em;
+    }
+    .card-body .row h6, .card-body .row p{
+        font-size: 85%;
+    }
+}
+@media (max-width: 991px){
+    #navbarResponsive li{
+        text-align: center;
+        background-color: rgba(0,0,0,.25);
+        padding: 0;
+        margin: 0;
+    }
+    .dropdown > .dropdown-toggle:active {
+        pointer-events: fill;
+    }
+    .bg-navbar{
+        background-color: rgba(0,0,0, 0.75);
+    }
+    .rank-2-5-v{
+        display: none;
+    }
+    .rank-2-5-h{
+        display: block;
+    }
+    .rank-2-5-h img{
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .card-body .row h6, .card-body .row p{
+        font-size: 80%;
+    }
+}
+@media (max-width: 767px) {
+    #banner-caption h1{
+        font-size: 3em;
+    }
+    #banner-caption h3{
+        font-size: 1.35em;
+    }
+    #banner-caption h4{
+        font-size: 1em;
+    }
+    .card h3{
+        font-size: 1.2em;
+    }
+    .card-body > p{
+        font-size: 80%;
+
+    }
+    .card-body .row h6, .card-body .row p{
+        font-size: 75%;
+    }
+}
+@media (max-width: 635px){
+    .footer h4{
+        font-size: 1.3em;
+    }
+    .footer h5{
+        font-size: 1em;
+    }
+    .social a {
+        font-size: 3em;
+        padding: 0 .5em 0 .5em;
+    }
+}
+@media (max-width: 575px) {
+    .card-body h2{
+        font-size: 1.5em;
+    }
+    .rank-2-5-h{
+        display: none;
+    }
+    .rank-2-5-v{
+        display: block;
+    }
+    #toTop{
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .card-body .row h6, .card-body .row p{
+        font-size: 100%;
+    }
+}
+@media (max-width: 420px){
+    .navbar-brand, .navbar-brand img{
+        width: 75%;
+    }
+    .navbar-toggler{
+        padding: 0.20rem 0.40rem;
+    }
+    .navbar-toggler-icon{
+        width: .9em;
+        height: .9em;
+    }
+    a .row > .col-6{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .social a {
+        font-size: 3em;
+        padding: 0 .25em 0 .25em;
+    }
+}
+@media (max-width: 317px) {
+    .navbar-toggler-icon{
+        width: .9em;
+        height: .9em;
+    }
+    .social a{
+        font-size: 2.7em;
+    }
+}
+@media (max-width: 290px) {
+    .rank-2-5-v .row h6{
+        font-size: 85%;
+    }
+    .rank-2-5-v .row p{
+        font-size: 85%;
+    }
+    .social a{
+        font-size: 2.5em;
+    }
+}
