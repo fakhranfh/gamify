@@ -150,9 +150,6 @@ a:hover{
 }
 
 @media (max-width: 1199px){
-    .dropdown-menu{
-        width: 100%;
-    }
     .card h3{
         font-size: 1.5em;
     }
@@ -240,6 +237,9 @@ a:hover{
     }
 }
 @media (max-width: 420px){
+    .modal .col-1{
+        display: none;
+    }
     .navbar-brand, .navbar-brand img{
         width: 75%;
     }
