@@ -53,9 +53,6 @@ html, body{
     background-color: #271c1c;
     width: fit-content;
 }
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
 .dropdown > .dropdown-toggle:active {
     pointer-events: none;
 }
@@ -149,6 +146,11 @@ a:hover{
     text-decoration: none;
 }
 
+@media (min-width: 1200px) {
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
 @media (max-width: 1199px){
     .card h3{
         font-size: 1.5em;
@@ -161,11 +163,8 @@ a:hover{
     .dropdown-menu{
         width: 100%;
     }
-    .dropdown > .dropdown-toggle:active {
-        pointer-events: fill;
-    }
-    .dropdown > .dropdown-toggle:disabled {
-        pointer-events: none;
+    .dropdown:enabled > .dropdown-menu {
+        display: block;
     }
     #navbarResponsive li{
         text-align: center;
