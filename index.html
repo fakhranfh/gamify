@@ -6,80 +6,17 @@
     <title>GAMIFY</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style-index.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="js/style-index.js"></script>
 </head>
 <body>
-<!--Modal Login-->
-    <div class="modal fade" id="modal-login">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark">
-                <div class="modal-header text-center">
-                    <div class="col-1"></div>  <!--biar tulisannya di tengah-->
-                    <h4 class="modal-title text-center col-10"><img src="img/gamify.png"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form id="form-login" method="get">
-                        <div class="form-group">
-                            <label for="input-username-login">Username</label>
-                            <input required="required" oninvalid="this.setCustomValidity('Masukkan username!')" oninput="setCustomValidity('')" type="text" class="form-control" id="input-username-login" name="uname">
-                        </div>
-                        <div class="form-group">
-                            <label for="input-password-login">Password</label>
-                            <input required="required" oninvalid="this.setCustomValidity('Masukkan password!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-password-login" name="pwd">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="check-ingat-saya" name="ingat">
-                            <label class="form-check-label" for="check-ingat-saya">Ingat saya</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" form="form-login" class="btn btn-primary w-100">Masuk</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--Modal daftar-->
-    <div class="modal fade" id="modal-daftar">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark">
-                <div class="modal-header text-center">
-                    <div class="col-1"></div>  <!--biar tulisannya di tengah-->
-                    <h4 class="modal-title text-center col-10"><img src="img/gamify.png"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form id="form-daftar" method="get">
-                        <div class="form-group">
-                            <label for="input-email-daftar">E-mail</label>
-                            <input required="required" type="email" oninvalid="this.setCustomValidity('Masukkan e-mail yang valid!')" oninput="setCustomValidity('')" class="form-control" id="input-email-daftar" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="input-username-daftar">Username</label>
-                            <input required="required" oninvalid="this.setCustomValidity('Masukkan username!')" oninput="setCustomValidity('')" type="text" class="form-control" id="input-username-daftar" name="uname">
-                        </div>
-                        <div class="form-group">
-                            <label for="input-password-daftar">Password</label>
-                            <input required="required" oninvalid="this.setCustomValidity('Masukkan password!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-password-daftar" name="pwd">
-                        </div>
-                        <div class="form-group">
-                            <label for="input-konf-password-daftar">Konfirmasi Password</label>
-                            <input required="required" oninvalid="this.setCustomValidity('Password tidak sama!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-konf-password-daftar">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" form="form-daftar" class="btn btn-primary w-100">Daftar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-<!----------------------------------MODAL end----------------------------->
     <div id="banner">
 <!--Navigation Bar-->
         <nav class="navbar navbar-expand-lg bg-navbar navbar-dark fixed-top">
-            <a class="navbar-brand" href="/gamify"><img src="img/gamify.png"></a>
+            <a class="navbar-brand" href="index.html"><img src="img/gamify.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -605,11 +542,73 @@
         </div>
     </div>
 
-<!--JavaScript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="js/style-index.js"></script>
+    <!--Modal Login-->
+    <div class="modal fade" id="modal-login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header text-center">
+                    <div class="col-1"></div>  <!--biar tulisannya di tengah-->
+                    <h4 class="modal-title text-center col-10"><img src="img/gamify.png"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-login" method="get">
+                        <div class="form-group">
+                            <label for="input-username-login">Username</label>
+                            <input required="required" oninvalid="this.setCustomValidity('Masukkan username!')" oninput="setCustomValidity('')" type="text" class="form-control" id="input-username-login" name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password-login">Password</label>
+                            <input required="required" oninvalid="this.setCustomValidity('Masukkan password!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-password-login" name="pwd">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check-ingat-saya" name="ingat">
+                            <label class="form-check-label" for="check-ingat-saya">Ingat saya</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="form-login" class="btn btn-primary w-100">Masuk</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal daftar-->
+    <div class="modal fade" id="modal-daftar">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header text-center">
+                    <div class="col-1"></div>  <!--biar tulisannya di tengah-->
+                    <h4 class="modal-title text-center col-10"><img src="img/gamify.png"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-daftar" method="get">
+                        <div class="form-group">
+                            <label for="input-email-daftar">E-mail</label>
+                            <input required="required" type="email" oninvalid="this.setCustomValidity('Masukkan e-mail yang valid!')" oninput="setCustomValidity('')" class="form-control" id="input-email-daftar" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-username-daftar">Username</label>
+                            <input required="required" oninvalid="this.setCustomValidity('Masukkan username!')" oninput="setCustomValidity('')" type="text" class="form-control" id="input-username-daftar" name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password-daftar">Password</label>
+                            <input required="required" oninvalid="this.setCustomValidity('Masukkan password!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-password-daftar" name="pwd">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-konf-password-daftar">Konfirmasi Password</label>
+                            <input required="required" oninvalid="this.setCustomValidity('Password tidak sama!')" oninput="setCustomValidity('')" type="password" class="form-control" id="input-konf-password-daftar">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="form-daftar" class="btn btn-primary w-100">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------MODAL end----------------------------->
 </body>
 </html>
