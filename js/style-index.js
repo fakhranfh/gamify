@@ -42,7 +42,8 @@ $(document).ready(function () {
     function loginDanDaftar(){
         $('#link-login').click(function(){
             $('#modal-login').modal();
-            if(localStorage.uname !== ""){
+            if(localStorage.ingatUname != undefined //jika bukan pertama kali buka website ini
+            ){
                 $('#modal-login input')[0].value = localStorage.ingatUname;
                 $('#modal-login input')[1].value = localStorage.ingatPwd;
             }
@@ -66,8 +67,9 @@ $(document).ready(function () {
     }
 
     // menentukan tampilan navigation bagian kanan
-    if(localStorage.uname === ""){
-        loginDanDaftar(); //jika tidak login, tampilkan menu login dan daftar
+    if(localStorage.uname == undefined || // jika pertama kali buka website ini
+        localStorage.uname == ""){ // jika belum login
+        loginDanDaftar(); // tampilkan menu login dan daftar
     }
     else{
         gantiMenu(); // jika masih login, tampilkan menu username
@@ -116,13 +118,4 @@ $(document).ready(function () {
             }
         }
     });
-
-    if( localStorage.ingatUname === "undefined" && localStorage.ingatPwd === "undefined"){
-        $('#modal-login input')[0].value = "";
-        $('#modal-login input')[1].value = "";
-    }
-    else{
-        $('#modal-login input')[0].value = localStorage.ingatUname;
-        $('#modal-login input')[1].value = localStorage.ingatPwd;
-    }
 })
