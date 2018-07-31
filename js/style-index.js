@@ -121,4 +121,8 @@ $(document).ready(function () {
         $('#modal-login input')[0].value = localStorage.ingatUname;
         $('#modal-login input')[1].value = localStorage.ingatPwd;
     }
+    else{
+        $('#modal-login input')[0].value = "";
+        $('#modal-login input')[1].value = "";
+    }
 })
