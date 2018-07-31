@@ -117,7 +117,7 @@ $(document).ready(function () {
         }
     });
 
-    if( $('#modal-login input')[0].value !== "undefined" && $('#modal-login input')[1].value !== "undefined"){
+    if( localStorage.ingatUname !== "undefined" && localStorage.ingatPwd !== "undefined"){
         $('#modal-login input')[0].value = localStorage.ingatUname;
         $('#modal-login input')[1].value = localStorage.ingatPwd;
     }
