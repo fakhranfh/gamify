@@ -117,12 +117,12 @@ $(document).ready(function () {
         }
     });
 
-    if( localStorage.ingatUname !== "undefined" && localStorage.ingatPwd !== "undefined"){
-        $('#modal-login input')[0].value = localStorage.ingatUname;
-        $('#modal-login input')[1].value = localStorage.ingatPwd;
-    }
-    else{
+    if( localStorage.ingatUname === "undefined" && localStorage.ingatPwd === "undefined"){
         $('#modal-login input')[0].value = "";
         $('#modal-login input')[1].value = "";
+    }
+    else{
+        $('#modal-login input')[0].value = localStorage.ingatUname;
+        $('#modal-login input')[1].value = localStorage.ingatPwd;
     }
 })
