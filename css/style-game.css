@@ -301,6 +301,9 @@ iframe{
     }
 }
 @media (max-width: 608px) {
+    .carousel-inner > .carousel-item {
+        height: 200px;
+    }
     .spek-md{
         display: none;
     }
