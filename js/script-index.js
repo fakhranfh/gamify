@@ -1,13 +1,11 @@
 $(document).ready(function () {
-    $(window).resize(function () {
-        if( $(document).width() <= 767 ){
-            $('#body').addClass("container-fluid");
-            $('#body').removeClass("container");
-        }
-        else{
-            $('#body').addClass("container");
-            $('#body').removeClass("container-fluid");
-        }
+    //ganti warna navbar jadi item saat discroll
+    var navbarHitam = function () {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
+    }
+    navbarHitam();
+    $(window).scroll(function(){
+        navbarHitam();
     });
     //smooth scroll
     $('.dropdown-item').click(function() {
